@@ -1,0 +1,3 @@
+/home/ke/CLionProjects/findIn2Array/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/ke/CLionProjects/findIn2Array/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/ke/CLionProjects/findIn2Array/cmake-build-debug/CMakeFiles/findIn2Array.dir
