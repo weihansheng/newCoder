@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/printList.dir/main.cpp.o  -o printList 
