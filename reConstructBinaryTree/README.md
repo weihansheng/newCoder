@@ -17,3 +17,30 @@
 4.左右子树的前序序列第一个元素分别是根节点的左右儿子
 
 5.重复以上步骤
+
+```java
+private TreeNode reConstructBinaryTreeCore(int [] pre,int [] in) {
+        if(pre.length==0||in.length==0) {
+            return null;
+        }
+        if(pre.length!=in.length){
+            System.out.println("长度不一样。");
+        }
+        TreeNode root=new TreeNode(pre[0]);
+        //找到根节点在in中的位置
+        for (int i = 0; i <in.length ; i++) {
+            if (pre[0]==in[i]){
+                //递归构造左子树和右子树
+                root.left=reConstructBinaryTree(Arrays.copyOfRange(pre,1,i+1),Arrays.copyOfRange(in,0,i));
+                root.right=reConstructBinaryTree(Arrays.copyOfRange(pre,i+1,pre.length),Arrays.copyOfRange(in,i+1,in.length));
+            }
+
+        }
+        return root;
+    }
+
+    public TreeNode reConstructBinaryTree(int [] pre,int [] in) {
+        TreeNode root=reConstructBinaryTreeCore(pre,in);
+        return root;
+    }
+```

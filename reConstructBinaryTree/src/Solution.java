@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -102,9 +103,30 @@ public class Solution {
         }
         return root;
     }
+    //简介版  需导入import java.util.Arrays;
+    private TreeNode reConstructBinaryTreeCore(int [] pre,int [] in) {
+        if(pre.length==0||in.length==0) {
+            return null;
+        }
+        if(pre.length!=in.length){
+            System.out.println("长度不一样。");
+        }
+        TreeNode root=new TreeNode(pre[0]);
+        //找到根节点在in中的位置
+        for (int i = 0; i <in.length ; i++) {
+            if (pre[0]==in[i]){
+                //递归构造左子树和右子树
+                root.left=reConstructBinaryTree(Arrays.copyOfRange(pre,1,i+1),Arrays.copyOfRange(in,0,i));
+                root.right=reConstructBinaryTree(Arrays.copyOfRange(pre,i+1,pre.length),Arrays.copyOfRange(in,i+1,in.length));
+            }
+
+        }
+        return root;
+    }
 
     public TreeNode reConstructBinaryTree(int [] pre,int [] in) {
-        TreeNode root=reConstructBinaryTree(pre,0,pre.length-1,in,0,pre.length-1);
+//        TreeNode root=reConstructBinaryTree(pre,0,pre.length-1,in,0,pre.length-1);
+        TreeNode root=reConstructBinaryTreeCore(pre,in);
         return root;
     }
 

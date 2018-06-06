@@ -7,5 +7,7 @@ public class TreeNode {
         this.val = val;
 
     }
+    public TreeNode() {
+    }
 
 }
