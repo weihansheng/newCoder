@@ -1,4 +1,0 @@
-/Applications/CLion.app/Contents/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/Johan007/workspace/C++/NewCoder/minInRotateArray
--- Configuring done
--- Generating done
--- Build files have been written to: /Users/Johan007/workspace/C++/NewCoder/minInRotateArray/cmake-build-debug
