@@ -1,6 +1,7 @@
 # leetcode
 ## wordBreak 
-    Given a string s and a dictionary of words dict, determine if s can be segmented into a space-separated sequence of one or more dictionary words.
+    Given a string s and a dictionary of words dict, determine if s can be segmented into
+    a space-separated sequence of one or more dictionary words.
     For example, given
     s ="leetcode",
     dict =["leet", "code"].
@@ -18,6 +19,21 @@
 注意：s.substring(j,i)为s[j,i-1]
 
 ```java
-
+public boolean wordBreak(String s, Set<String> dict) {
+        int length=s.length();
+        boolean[] f=new boolean[length+1];
+        f[0]=true;
+        for (int i = 1; i <= length; i++) {
+            for (int j = 0; j <i ; j++) {
+                String sb_s=s.substring(j,i);
+                if (f[j]&&dict.contains(sb_s)){
+                    f[i]=true;
+                    //如果有一个可分的，就可以跳出第二个for循环
+                    break;
+                }
+            }
+        }
+        return f[length];
+    }
 
 ```
