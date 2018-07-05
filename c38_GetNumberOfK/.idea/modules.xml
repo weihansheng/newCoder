@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/GetNumberOfK.iml" filepath="$PROJECT_DIR$/GetNumberOfK.iml" />
+      <module fileurl="file://$PROJECT_DIR$/c38_GetNumberOfK.iml" filepath="$PROJECT_DIR$/c38_GetNumberOfK.iml" />
     </modules>
   </component>
 </project>
